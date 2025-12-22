@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt,
+BCOR=5mm,
+DIV=12,
+headings = normal,
+DIV=calc,
+headlines=1.1,
+headinclude=true,
+mpinclude=false,
+pagesize=auto,
+twoside=false,
+twocolumn=false,
+headings=openany,
+titlepage=true,
+headsepline,
+toc=listof,
+toc=bib,
+toc=indent,
+listof=indent,
+numbers=noenddot]{scrbook}
+
+\setcounter{tocdepth}{1}
+
+%% Packages
+\usepackage[english,ngerman]{babel}
+\usepackage{xcolor}
+\usepackage{fdsymbol}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage[parfill]{parskip}
+\usepackage{enumitem}
+\usepackage{glossaries}
+\usepackage{tabto}
+\usepackage[hidelinks]{hyperref}
+
+%% Eigene Befehle
+\newcommand{\p}{\texorpdfstring{\ensuremath{\textcolor{black}{\spadesuit}}}{Lg}}
+\newcommand{\pl}{\texorpdfstring{\ensuremath{\textcolor{black}{\spadesuit}} }{Lg}}
+\renewcommand{\c}{\texorpdfstring{\ensuremath{\textcolor{red}{\varheartsuit}}}{Lg}}
+\newcommand{\cl}{\texorpdfstring{\ensuremath{\textcolor{red}{\varheartsuit}} }{Lg}}
+\renewcommand{\k}{\texorpdfstring{\ensuremath{\textcolor{red}{\vardiamondsuit}}}{Lg}}
+\newcommand{\kl}{\texorpdfstring{\ensuremath{\textcolor{red}{\vardiamondsuit}} }{Lg}}
+\renewcommand{\t}{\texorpdfstring{\ensuremath{\textcolor{black}{\clubsuit}}}{Lg}}
+\newcommand{\tl}{\texorpdfstring{\ensuremath{\textcolor{black}{\clubsuit}} }{Lg}}
+\newcommand{\ra}{\ensuremath{\rightarrow} }
+\newcommand{\f}{\tabto{5mm} f \tabto{12mm}}
+\newcommand{\nf}{\tabto{5mm} nf \tabto{12mm}}
+\newcommand{\gf}{\tabto{5mm} gf \tabto{12mm}}
+\newcommand{\mat}[1]{\textcolor{brown}{#1}}
+
+%% Glossar
+\makeglossaries
+\input{./content/glossar}
+\glsadd{Alert}
+\glsadd{F}
+\glsadd{FL}
+\glsadd{FV}
+\glsadd{UF}
+\glsadd{OF}
+
+%% Inhalt
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+{\Huge\bfseries Bridge-Bietsystem\par}
+\vspace{1cm}
+{\Large\itshape Matthis Scholz, Joscha Herrmann\par}
+\vspace{3cm}    
+\includegraphics[width=0.7\textwidth]{pictures/bum-logo.jpeg}
+\vfill
+{\large Stand 17.12.2025 \par}
+\end{titlepage}
+
+\includepdf[scale=1]{content/Koka_Matthis_Joscha.pdf}
+\tableofcontents
+\include{./content/kapitel1}
+\include{./content/kapitel2}
+\include{./content/kapitel3}
+\include{./content/kapitel4}
+\include{./content/kapitel5}
+\include{./content/kapitel6}
+\printglossary[title=Abkürzungsverzeichnis, style=list, nonumberlist]
+\end{document}

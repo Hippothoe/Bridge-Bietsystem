@@ -42,10 +42,15 @@ numbers=noenddot]{scrbook}
 \renewcommand{\t}{\texorpdfstring{\ensuremath{\textcolor{black}{\clubsuit}}}{Lg}}
 \newcommand{\tl}{\texorpdfstring{\ensuremath{\textcolor{black}{\clubsuit}} }{Lg}}
 \newcommand{\ra}{\ensuremath{\rightarrow} }
+\newcommand{\mat}[1]{\textcolor{brown}{#1}}
+
+%% Tabbing
+\TabPositions{5mm,12mm,22mm}
 \newcommand{\f}{\tabto{5mm} f \tabto{12mm}}
 \newcommand{\nf}{\tabto{5mm} nf \tabto{12mm}}
 \newcommand{\gf}{\tabto{5mm} gf \tabto{12mm}}
-\newcommand{\mat}[1]{\textcolor{brown}{#1}}
+\newcommand{\rarelayitem}{\item\tabto{5mm}\ra\tabto{12mm}}
+\newcommand{\relayitem}{\tabto{12mm}}
 
 %% Glossar
 \makeglossaries
